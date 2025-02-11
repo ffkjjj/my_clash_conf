@@ -220,7 +220,7 @@ rule-providers:
   OpenAi:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/ffkjjj/my_clash_conf@develop/rule/OpenAi.yaml
+    url: https://cdn.jsdelivr.net/gh/ffkjjj/my_clash_conf@v1.0.0/rule/OpenAi.yaml
     path: ./ruleset/OpenAi.yaml
     interval: 86400
 
