@@ -37,10 +37,6 @@ proxy-groups:
       - 故障转移
       - 负载均衡
       - 手动切换
-      - 香港节点
-      - 台湾节点
-      - 新加坡节点
-      - 日本节点
       - 美国节点
       - DIRECT
 
@@ -96,46 +92,6 @@ proxy-groups:
       - 节点选择
       - DIRECT
 
-  - name: 香港节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    lazy: true
-    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
-    use:
-      - Subscribe
-    filter: 港|🇭🇰|HK|(?i)Hong
-
-  - name: 台湾节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    lazy: true
-    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png
-    use:
-      - Subscribe
-    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
-
-  - name: 新加坡节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    lazy: true
-    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
-    use:
-      - Subscribe
-    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
-
-  - name: 日本节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    lazy: true
-    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png
-    use:
-      - Subscribe
-    filter: 日|🇯🇵|东京|JP|(?i)Japan
-
   - name: 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -144,7 +100,7 @@ proxy-groups:
     icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
     use:
       - Subscribe
-    filter: 美|🇺🇲|US|(?i)States|American
+    filter: v2ray|美|🇺🇲|US|(?i)States|American
 
 rule-providers:
   LocalAreaNetwork_domain:
@@ -227,7 +183,7 @@ rule-providers:
 rules:
   - DOMAIN-SUFFIX,cmitry.com,DIRECT
   - DOMAIN-SUFFIX,cmhktry.com,DIRECT
-  - RULE-SET,OpenAi,台湾节点
+  - RULE-SET,OpenAi,美国节点
   - RULE-SET,LocalAreaNetwork_domain,全球直连
   - RULE-SET,LocalAreaNetwork_ipcidr,全球直连
   - RULE-SET,UnBan_domain,全球直连
