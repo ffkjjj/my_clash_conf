@@ -227,6 +227,7 @@ rule-providers:
 rules:
   - DOMAIN-SUFFIX,cmitry.com,DIRECT
   - DOMAIN-SUFFIX,cmhktry.com,DIRECT
+  - DOMAIN,weatherkit.apple.com,节点选择
   - RULE-SET,OpenAi,台湾节点
   - RULE-SET,LocalAreaNetwork_domain,全球直连
   - RULE-SET,LocalAreaNetwork_ipcidr,全球直连
